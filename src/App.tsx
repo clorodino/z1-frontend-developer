@@ -1,10 +1,15 @@
 import './App.css';
+import { Routes, Route, Link } from 'react-router-dom'
+import TakePhoto from './pages/TakePhoto';
+import Main from './pages/Main';
 
 function App() {
   return (
     <div className="App">
-      <div className="container">
-      </div>
+      <Routes>
+        <Route path='/' element={<Main/>} />
+			  <Route path='camera' element={<TakePhoto/>} />
+      </Routes>
     </div>
   );
 }
