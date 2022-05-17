@@ -13,6 +13,7 @@ $white: #FFFFFF;
 * {
   margin: 0;
   top: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -162,6 +163,25 @@ header {
   }
 }
 
+.main-pic-content{
+  position: relative;
+}
+
+.main__content-img {
+  height: 100%;
+  position: absolute;
+}
+
+.main__content-card-img{
+  height: 80%;
+  position: absolute;
+  top: 0.9375rem;
+}
+
+.main__content-btn{
+  position: relative;
+}
+
 // CAMERA
 
 .camera {
@@ -214,12 +234,16 @@ header {
     }
   
     .alert {
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+
       position: relative;
       top: -8.5rem;
       font-size: 1rem;
       letter-spacing: 0;
       line-height: 1rem;
-      padding: 1.25rem;
+      //padding: 1.25rem;
     }
     
     .btn-link {
@@ -231,9 +255,7 @@ header {
 
 // ALERT
 
-.main-pic-content{
-  position: relative;
-}
+
 
 .main-alert {
   position: absolute;
@@ -280,6 +302,11 @@ header {
 .border-rejected{
   @include border;
   color: $rejected;
+}
+
+.border-warning{
+  @include border;
+  color: rgba(128, 128, 128, 0);
 }
 
 .color-approved {

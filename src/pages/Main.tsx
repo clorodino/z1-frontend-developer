@@ -6,6 +6,8 @@ import { Props } from '../types'
 
 const Main: React.FC<Props> = ({ picture, setPicture, isApproved, setIsApproved }) => {
 
+	console.log('isApproved in Main --->',isApproved);
+
 	const data = {
 		title: 'Scan your ID',
 		description: 'Take a picture. It may take time to validate your personal information.',

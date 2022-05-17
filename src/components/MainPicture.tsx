@@ -8,7 +8,7 @@ import { Props } from '../types'
 
 const MainPicture: React.FC<Props> = ({ picture, setPicture, isApproved, setIsApproved }) => {
 	if (picture !== undefined) {
-		if (isApproved) {
+		if (isApproved === 1) {
 			return (
 				<div className='main-pic-content'>
 					<div className='border-approved'>
@@ -23,12 +23,14 @@ const MainPicture: React.FC<Props> = ({ picture, setPicture, isApproved, setIsAp
 				</div>
 			)
 		} else {
+			console.log('isApproved in MainPicture --->', isApproved);
+			// setIsApproved(0)
 			return (
 				<div className='main-pic-content'>
 					<div className='border-rejected'>
 						<PictureContent>
-							<img src={picture} style={{ height: '100%', position: 'absolute' }} alt='' />
-							<Link to='/camera' className='link' style={{ position: 'relative' }}>
+							<img className='main__content-img' src={picture} alt='' />
+							<Link to='/camera' className='link main__content-btn' onClick={()=> setIsApproved(0)} >
 								<ButtonPrimary>Retake Picture</ButtonPrimary>
 							</Link>
 						</PictureContent>
@@ -42,10 +44,10 @@ const MainPicture: React.FC<Props> = ({ picture, setPicture, isApproved, setIsAp
 	} else {
 		return (
 			<div className='card-id'>
-				<div className='card-id' style={{ position: 'relative' }}>
+				<div className=' card-id main-pic-content'>
 					<PictureContent>
-						<img src={CardId} style={{ height: '80%', position: 'absolute', top: '0.9375rem' }} alt='' />
-						<Link to='/camera' className='link' style={{ position: 'relative' }}>
+						<img src={CardId} className='main__content-card-img'alt='' />
+						<Link to='/camera' className='link main__content-btn'>
 							<ButtonPrimary>Take Picture</ButtonPrimary>
 						</Link>
 					</PictureContent>

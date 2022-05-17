@@ -6,6 +6,9 @@ import TakePhotoView from './TakePhotoView'
 import { Props } from '../types'
 
 const TakePhoto: React.FC<Props> = ({ picture, setPicture, isApproved, setIsApproved }) => {
+
+	console.log('isApproved in TakePhoto --->',isApproved);
+
 	const history = useNavigate()
 
 	const checkImage = () => {
@@ -14,14 +17,14 @@ const TakePhoto: React.FC<Props> = ({ picture, setPicture, isApproved, setIsAppr
 				.then(res => res.json())
 				.then(json => {
 					if (json.summary.outcome === 'Approved') {
-						setIsApproved(true)
+						setIsApproved(1)
 						setPicture(idImage)
 
 						setTimeout(() => {
 							history('/')
 						}, 2000)
 					} else {
-						setIsApproved(false)
+						setIsApproved(2)
 						setPicture(idImage)
 					}
 				})

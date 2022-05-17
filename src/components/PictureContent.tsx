@@ -2,19 +2,19 @@ import React from 'react'
 
 interface Props {
 	children: React.ReactNode
-	isApproved?: boolean
+	isApproved?: number
 }
 
 const PictureContent: React.FC<Props> = ({ children, isApproved }) => {
 	switch (isApproved) {
-		case true:
+		case 1:
 			return <div className='pic-content border-approved'>{children}</div>
 
-		case false:
+		case 2:
 			return <div className='pic-content border-rejected'>{children}</div>
 
 		default:
-			return <div className='pic-content'>{children}</div>
+			return <div className='pic-content border-warning'>{children}</div>
 	}
 }
 

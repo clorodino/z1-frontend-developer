@@ -7,7 +7,7 @@ import Main from './pages/Main'
 
 function App() {
 	const [picture, setPicture] = useState<string>()
-	const [isApproved, setIsApproved] = useState<boolean>()
+	const [isApproved, setIsApproved] = useState<number>(0)
 
 	return (
 		<div className='App'>

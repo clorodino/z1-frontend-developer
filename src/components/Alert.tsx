@@ -1,19 +1,19 @@
 import React from 'react'
 
 interface Props {
-	isApproved?: boolean
+	isApproved?: number
 }
 
 const Alert: React.FC<Props> = ({ isApproved }) => {
 	switch (isApproved) {
-		case true:
+		case 1:
 			return (
 				<div className='alert'>
 					<i className='fa-regular fa-circle-check color-approved'></i>Picture taken!
 				</div>
 			)
 
-		case false:
+		case 2:
 			return <div className='alert'></div>
 
 		default:
