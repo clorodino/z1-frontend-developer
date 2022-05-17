@@ -1,10 +1,10 @@
 import React from 'react'
+
 interface Props {
 	isApproved?: boolean
 }
 
 const Alert: React.FC<Props> = ({ isApproved }) => {
-
 	switch (isApproved) {
 		case true:
 			return (
