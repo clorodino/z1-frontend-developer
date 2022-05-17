@@ -36,6 +36,109 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.camera {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: rgba(20, 28, 38, 0.8);
+}
+
+.camera .content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.camera .content .bg {
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.camera .content .content-info {
+  color: white;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.camera .filter {
+  -webkit-filter: blur(4px) grayscale(100%);
+          filter: blur(4px) grayscale(100%);
+  opacity: 0.1;
+}
+
+.camera .focus {
+  -webkit-clip-path: inset(37% 12% 36.5% 12.5% round 12px);
+          clip-path: inset(37% 12% 36.5% 12.5% round 12px);
+}
+
+.camera .text-content {
+  padding: 0 2.875rem 1.875rem;
+  white-space: pre;
+  margin-top: 6.25rem;
+}
+
+.camera .pic-content {
+  height: 176px;
+  width: 286px;
+  margin-bottom: 8.25rem;
+}
+
+.camera .alert {
+  position: relative;
+  top: -8.5rem;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1rem;
+  padding: 1.25rem;
+}
+
+.camera .btn-link {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.mask {
+  height: 176px;
+  width: 286px;
+  border: 2px solid red;
+  position: relative;
+  border-radius: 1rem;
+  top: calc(50% - 176px/2);
+}
+
+.content-info {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header {
@@ -44,7 +147,7 @@ header {
 }
 
 header .header__logo {
-  color: black;
+  color: #2F0079;
   font-family: 'Roboto', sans-serif;
   font-style: italic;
   font-size: 1.3125rem;
@@ -52,8 +155,6 @@ header .header__logo {
 }
 
 .pic-content {
-  background-color: lightgrey;
-  border-radius: 1rem;
   height: 160px;
   width: 260px;
   display: -webkit-box;
@@ -67,35 +168,72 @@ header .header__logo {
           align-items: center;
 }
 
+
+.border-approved {
+  border: 2px solid #69CC8B;
+  border-radius: 1rem;
+}
+
+.border-rejected {
+  border: 2px solid #C00000;
+  border-radius: 1rem;
+}
+
+.card-id {
+  height: 160px;
+  width: 260px;
+  border-radius: 0.75rem;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0 10px 20px -6px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 10px 20px -6px rgba(0, 0, 0, 0.15);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .link {
   text-decoration: none;
-  /* no underline */
 }
 
 .btn-primary {
-  padding: 0.75rem 1.25rem;
-  border-radius: 24px;
+  background-color: #2F0079;
   color: #FFFFFF;
-  background-color: black;
-  cursor: pointer;
+  padding: 0.75rem 1.25rem;
+  border-radius: 1.5rem;
   text-transform: uppercase;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.35px;
+  line-height: 24px;
+  -webkit-box-shadow: 0 10px 20px -5px rgba(47, 0, 121, 0.3);
+          box-shadow: 0 10px 20px -5px rgba(47, 0, 121, 0.3);
+  cursor: pointer;
 }
 
 .btn-primary:hover {
-  background-color: grey;
+  background-color: #24005d;
   color: white;
 }
 
 .btn-primary:active {
-  background-color: darkgray;
+  background-color: #35008a;
   color: white;
 }
 
 .btn-link {
   padding: 0.75rem 1.25rem;
   border-radius: 24px;
-  color: black;
+  color: white;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 700;
@@ -111,4 +249,66 @@ header .header__logo {
 
 .text-content {
   text-align: center;
+  padding: 1.875rem;
+}
+
+.text-content h1 {
+  font-size: 1.3125rem;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.text-content p {
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+.fa-regular {
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+}
+
+.main-pic-content {
+  position: relative;
+}
+
+.main-alert {
+  position: absolute;
+  top: 91%;
+  left: 54%;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.4rem 0.6rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.alert-green {
+  background-color: #69CC8B;
+}
+
+.alert-red {
+  background-color: #C00000;
+}
+
+.fa-xmark {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+.fa-check {
+  margin-right: 0.5rem;
+  font-size: 1rem;
 }

@@ -1,10 +1,15 @@
 import React from 'react'
+interface Props {
+  children?: React.ReactNode
+  title: string
+  description: string
+}
 
-const TextContent = () => {
+const TextContent: React.FC<Props> = ({children, title, description}) => {
   return (
     <div className='text-content'>
-        <h1>Title 1</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nobis repellat vel magni inventore ut debitis maiores expedita, unde earum laborum omnis </p>
+        <h1>{title}</h1>
+        <p>{description}</p>
     </div>
   )
 }
