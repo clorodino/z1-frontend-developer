@@ -6,12 +6,11 @@ import TakePhotoView from './TakePhotoView'
 import { Props } from '../types'
 
 const TakePhoto: React.FC<Props> = ({ picture, setPicture, isApproved, setIsApproved }) => {
-
 	const history = useNavigate()
 
 	const checkImage = () => {
 		setTimeout(() => {
-			fetch('https://front-exercise.z1.digital/evaluations', { method: 'POST' }) // Calling to Api
+			fetch('https://front-exercise.z1.digital/evaluations', { method: 'POST' })
 				.then(res => res.json())
 				.then(json => {
 					if (json.summary.outcome === 'Approved') {

@@ -12,27 +12,10 @@ function App() {
 	return (
 		<div className='App'>
 			<Routes>
-				<Route 
-          path='/' 
-          element={
-            <Main 
-              picture={picture} 
-              setPicture={setPicture} 
-              isApproved={isApproved} 
-              setIsApproved={setIsApproved} 
-            />
-          } 
-        />
+				<Route path='/' element={<Main picture={picture} setPicture={setPicture} isApproved={isApproved} setIsApproved={setIsApproved} />} />
 				<Route
 					path='camera'
-					element={
-            <TakePhoto 
-              picture={picture} 
-              setPicture={setPicture} 
-              isApproved={isApproved} 
-              setIsApproved={setIsApproved} 
-            />
-          }
+					element={<TakePhoto picture={picture} setPicture={setPicture} isApproved={isApproved} setIsApproved={setIsApproved} />}
 				/>
 			</Routes>
 		</div>

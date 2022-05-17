@@ -28,7 +28,7 @@ const MainPicture: React.FC<Props> = ({ picture, setPicture, isApproved, setIsAp
 					<div className='border-rejected'>
 						<PictureContent>
 							<img className='main__content-img' src={picture} alt='' />
-							<Link to='/camera' className='link main__content-btn' onClick={()=> setIsApproved(0)} >
+							<Link to='/camera' className='link main__content-btn' onClick={() => setIsApproved(0)}>
 								<ButtonPrimary>Retake Picture</ButtonPrimary>
 							</Link>
 						</PictureContent>
@@ -44,7 +44,7 @@ const MainPicture: React.FC<Props> = ({ picture, setPicture, isApproved, setIsAp
 			<div className='card-id'>
 				<div className=' card-id main-pic-content'>
 					<PictureContent>
-						<img src={CardId} className='main__content-card-img'alt='' />
+						<img src={CardId} className='main__content-card-img' alt='' />
 						<Link to='/camera' className='link main__content-btn'>
 							<ButtonPrimary>Take Picture</ButtonPrimary>
 						</Link>
