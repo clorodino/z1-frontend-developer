@@ -23,8 +23,6 @@ const MainPicture: React.FC<Props> = ({ picture, setPicture, isApproved, setIsAp
 				</div>
 			)
 		} else {
-			console.log('isApproved in MainPicture --->', isApproved);
-			// setIsApproved(0)
 			return (
 				<div className='main-pic-content'>
 					<div className='border-rejected'>

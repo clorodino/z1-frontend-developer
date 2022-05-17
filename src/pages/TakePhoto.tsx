@@ -7,8 +7,6 @@ import { Props } from '../types'
 
 const TakePhoto: React.FC<Props> = ({ picture, setPicture, isApproved, setIsApproved }) => {
 
-	console.log('isApproved in TakePhoto --->',isApproved);
-
 	const history = useNavigate()
 
 	const checkImage = () => {
