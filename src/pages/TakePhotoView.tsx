@@ -18,12 +18,12 @@ The picture will be taken automatically.`,
 
 	return (
 		<div className='container camera'>
-			<div className='content'>
+			<div className='camera__content'>
 				<div className='bg filter' style={{ backgroundImage: `url(${bgImage})` }}></div>
-				<div className='content-info'>
+				<div className='camera__content-info'>
 					<TextContent title={data.title} description={data.description} />
 					<PictureContent isApproved={isApproved}>
-						<img src={idImage} style={{ height: '100%', position: 'relative' }} alt='' />
+						<img className='camera__content-img' src={idImage} alt='' />
 					</PictureContent>
 					<Alert isApproved={isApproved} />
 					<Link to='/' className='link'>

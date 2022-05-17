@@ -9,7 +9,7 @@ const Alert: React.FC<Props> = ({ isApproved }) => {
 		case true:
 			return (
 				<div className='alert'>
-					<i className='fa-regular fa-circle-check' style={{ color: '#69CC8B' }}></i>Picture taken!
+					<i className='fa-regular fa-circle-check color-approved'></i>Picture taken!
 				</div>
 			)
 
@@ -19,7 +19,7 @@ const Alert: React.FC<Props> = ({ isApproved }) => {
 		default:
 			return (
 				<div className='alert'>
-					<i className='fa-regular fa-lightbulb' style={{ color: '#FAB72D' }}></i>Room lighting is too low
+					<i className='fa-regular fa-lightbulb color-warning'></i>Room lighting is too low
 				</div>
 			)
 	}
